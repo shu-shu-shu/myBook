@@ -17,6 +17,7 @@ class Tag(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
     timestamp = models.DateTimeField(auto_now_add=True)
+    super_tag = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name
