@@ -2,7 +2,7 @@
 
 from django.db.models import Count, Q
 
-from blog.models import Category, Tag
+from collection.models import Category, Tag
 
 
 def common(request):

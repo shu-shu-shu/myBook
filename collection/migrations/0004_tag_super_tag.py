@@ -7,13 +7,13 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0003_contentimage'),
+        ('collection', '0003_contentimage'),
     ]
 
     operations = [
         migrations.AddField(
             model_name='tag',
             name='super_tag',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='blog.tag'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='collection.tag'),
         ),
     ]

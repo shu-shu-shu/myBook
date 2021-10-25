@@ -41,8 +41,8 @@ class Migration(migrations.Migration):
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('published_at', models.DateTimeField(blank=True, null=True)),
                 ('is_public', models.BooleanField(default=False)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='blog.category')),
-                ('tags', models.ManyToManyField(blank=True, to='blog.Tag')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='collection.category')),
+                ('tags', models.ManyToManyField(blank=True, to='collection.Tag')),
             ],
             options={
                 'ordering': ['-created_at'],

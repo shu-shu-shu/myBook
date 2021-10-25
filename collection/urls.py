@@ -1,8 +1,8 @@
-# blog/urls.py
+# collection/urls.py
 
 from django.urls import path
 
-from blog.views import (
+from collection.views import (
     IndexView,
     PostDetailView,
     CategoryListView,
@@ -13,7 +13,7 @@ from blog.views import (
 )
 
 
-app_name = 'blog'
+app_name = 'collection'
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post_detail'),

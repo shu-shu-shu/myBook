@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0002_post_image'),
+        ('collection', '0002_post_image'),
     ]
 
     operations = [
@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('content_image', models.ImageField(upload_to='post_content_images/')),
-                ('post', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='blog.post')),
+                ('post', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='collection.post')),
             ],
         ),
     ]

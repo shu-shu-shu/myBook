@@ -1,11 +1,11 @@
-# blog/views.py
+# collection/views.py
 
 from django.db.models import Count, Q
 from django.http import Http404
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 
-from blog.models import Post, Category, Tag
+from collection.models import Post, Category, Tag
 from django.shortcuts import get_object_or_404
 
 
@@ -21,7 +21,7 @@ class PostDetailView(DetailView):
 
 class IndexView(ListView):
     model = Post
-    template_name = 'blog/index.html'
+    template_name = 'collection/index.html'
     paginate_by = 3
 
 
@@ -36,7 +36,7 @@ class TagListView(ListView):
 
 class CategoryPostView(ListView):
     model = Post
-    template_name = 'blog/category_post.html'
+    template_name = 'collection/category_post.html'
 
     def get_queryset(self):
         category_slug = self.kwargs['category_slug']
@@ -52,7 +52,7 @@ class CategoryPostView(ListView):
 
 class TagPostView(ListView):
     model = Post
-    template_name = 'blog/tag_post.html'
+    template_name = 'collection/tag_post.html'
 
     def get_queryset(self):
         tag_slug = self.kwargs['tag_slug']
@@ -68,7 +68,7 @@ class TagPostView(ListView):
 
 class SearchPostView(ListView):
     model = Post
-    template_name = 'blog/search_post.html'
+    template_name = 'collection/search_post.html'
     paginate_by = 3
 
     def get_queryset(self):

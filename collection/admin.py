@@ -1,8 +1,8 @@
-# blog/admin.py
+# collection/admin.py
 
 from django.contrib import admin
 
-from blog.models import Category, Tag, Post, ContentImage
+from collection.models import Category, Tag, Post, ContentImage
 
 
 class ContentImageInline(admin.TabularInline):
